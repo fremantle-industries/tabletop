@@ -10,12 +10,16 @@ and elastically scalable services.
 
 - ingest
 - process
-- deliver
 - warehouse
+- deliver
 - test
 - monitor
 - time travel
 - debug
+
+## Sections
+
+[Getting Started](./docs/GETTING_STARTED.md) | [Commands](./docs/COMMANDS.md)
 
 ## Usage
 
@@ -45,6 +49,12 @@ Start the applications in your binary
 
 ## Development
 
+Create `tabletop` configuration file
+
+```bash
+> make configure
+```
+
 Run the default `make` target which downloads dependencies to build and run
 `docker compose` on the host machine.
 
@@ -64,6 +74,8 @@ Run the `tabletop` test suite
 
 | Name                       | Endpoint                                              |
 | ---------------------------| ------------------------------------------------------|
+| Tabletop Control Plane UI  | [`tabletop.localhost`](http://tabletop.localhost)     |
+| Tabletop Control Plane API | [`api.localhost`](http://api.localhost)               |
 | Grafana                    | [`grafana.localhost`](http://grafana.localhost)       |
 | Prometheus                 | [`prometheus.localhost`](http://prometheus.localhost) |
 | Redpanda Kafka Console     | [`redpanda.localhost`](http://redpanda.localhost)     |
